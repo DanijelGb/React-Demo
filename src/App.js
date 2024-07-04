@@ -2,38 +2,45 @@
 // src/App.js
 import React, { useState } from 'react';
 import Button from './Components/Button';
+import MansGotJokes from './Components/Jokes';
+import OnOrOff from './Components/OnOrOff';
+import PersonalizedOutput from './Components/Greetings';
+import Card from './Components/Card';
+import Menu from './Components/Menu';
+import './App.css';
+import Pics from './Components/Picture';
+import pic from './Components/Pics/bild-cap.jpg';
+import Message from './Components/Message';
+import TextInput from './Components/TextInput';
+import Info from './Components/Info';
 
-
-function HelloMessage({ name }) {
-  return <div>Hello {name}</div>;
-}
 
 function App() {
- 
-const [count, setCount] = useState(0);
-
-const increase = () => {
-    setCount(count + 1);
-};
-
-const decrease = () => {
-    setCount(count - 1);
-};
-
- return (
-    <div className="App">
-      <HelloMessage name="John" />
-      <p>Current count: {count}</p>
-
-      <Button label="increase" onClickCallBack={increase}/>
-      <Button label="decrease" onClickCallBack={decrease}/>
+  return (
+    <div className="app">
+      <div className='container'>
+        <div className='links'>
+          <Menu></Menu>
+        </div>
+        <div className='content'>
+          <TextInput text='Danijel Grbic'size='p' cName='myName' />
+          <TextInput text="Hej! Jag är Danijel, blivande mjukvaru-programmerare." size='p' cName='intro' />
+          <div className='container'>
+            <div className='links'>
+              <Pics image={pic} altText="Picture of me"/> 
+            </div>
+            <div className='content'>
+              <Info/>
+            </div>
+          </div>
+          <Message/>
+        </div>
+      </div>
     </div>
-    
   );
 }
 
 export default App;
-
 
 /*
 // src/App.js
