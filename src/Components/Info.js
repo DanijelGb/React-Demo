@@ -4,14 +4,14 @@ import '../App.css';
 
 export default function Info() {
     return <ul className='info'>
-        <li><a href="www.linkedin.com/in/danijel-grbic-baa8541a3" className="linkedin" target="_blank">
+        <li><a href="https://www.linkedin.com/in/danijel-grbic-baa8541a3" className="linkedin" target="_blank">
             <div className="image-container">
                 <img src={linked} alt='LinkedIn photo'/>
             </div>
             <div className="text-container">Kolla min LinkedIn</div>
         </a></li>
 
-        <li><a href="www.linkedin.com/in/danijel-grbic-baa8541a3" className="github" target="_blank">
+        <li><a href="https://github.com/DanijelGb" className="github" target="_blank">
              <div className="image-container">
                 <img src={github} alt='GitHub photo'/>
             </div>
