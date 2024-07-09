@@ -23,7 +23,7 @@ function App() {
           <Menu></Menu>
         </div>
         <div className='content'>
-          <TextInput text='Danijel Grbic'size='p' cName='myName' />
+          <TextInput text='Danijel Grbic' size='p' cName='myName' />
           <TextInput text="Hej! Jag är Danijel, blivande mjukvaru-programmerare." size='p' cName='intro' />
           <div className='container'>
             <div className='links'>
