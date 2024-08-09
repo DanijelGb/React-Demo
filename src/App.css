@@ -1,95 +1,21 @@
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Base styles */
 body {
   background-color: rgb(14, 13, 13);
   color: white;
+  padding: 0;
 }
 
-.pic img {
-  width: 150px;
-  height: 180px;
-  border-radius: 50%;
-}
-
-p {
-  font-size: xx-large;
-
+.datum {
+  color: yellow;
 }
 
 .app {
-  margin-left: 140px;
+  margin: 0 auto;
+  font-family: Open Sans, sans-serif;
+  padding: 20px;  
+  margin-top: 70px;
+  margin-left: 200px;
   margin-right: 300px;
-  margin-top: 100px;
-  font-family: FreeMono, monospace;
-}
-
-.intro {
-  font-size: large;
-}
-
-.info {
-  padding-left: 20px;
-}
-
-.linkedin {
-  display: flex;
-  padding-bottom: 15px;
-}
-
-.github {
-  display: flex;
-  padding-bottom: 15px;
-}
-
-.cv {
-  display: flex;
-}
-
-.image-container img{
-  width: 25px;
-  margin-right: 10px;
-  flex: 1;
-}
-
-.text-container {
-  flex: 2;
-  font-size: 20px;
-  margin-top: 5px;
-  color: grey;
-}
-
-.container {
-  display: flex;
-  width: 100%;
-  padding: 10px;
-}
-
-.content{
-  flex: 3;
-  padding: 10px;
-}
-
-.links{
-  flex: 1;
-  padding: 10px;
-}
-
-.pic {
-  flex: 0 0 auto; /* This keeps the image size fixed */
-}
-
-.pic-container {
-  max-width: 100%;
 }
 
 .App-header {
@@ -107,11 +33,297 @@ p {
   color: #61dafb;
 }
 
+.p-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.pic img {
+  width: 150px;
+  height: 180px;
+  border-radius: 50%;
+}
+
+.text {
+  font-size: 1.3rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+.intro {
+  font-size: 1.25rem;
+}
+
+.info {
+  padding-left: 20px;
+}
+
+.linkedin, .github, .cv {
+  display: flex;
+  padding-bottom: 15px;
+  padding-left: 35px;
+}
+
+.image-container img {
+  width: 25px;
+  margin-right: 10px;
+  flex: 1;
+}
+
+.linkz {
+  flex: 1;
+}
+
+.content {
+  flex: 3;
+  padding: 10px;
+}
+
+.text-container {
+  flex: 2;
+  font-size: 1.25rem;
+  margin-top: 5px;
+  color: grey;
+}
+
+.container, .container-one {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  padding: 10px;
+}
+.links {
+  flex: 1;
+  margin-left: 10px;
+  margin-right: -20px;
+}
+
+.quiz {
+  text-align: center;
+  width : 30rem;
+}
+
+.pic {
+  flex: 0 0 auto; /* This keeps the image size fixed */
+}
+
+.pic-container {
+  max-width: 100%;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+  .app {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+.container-toggle {
+    text-align: center;
+    padding: 20px,
+  }
+
+  .imageContainer-toggle {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    display: inline-block;
+  }
+
+  .image-toggle {
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    top: 20px;
+    left: -100px;
+    z-Index: 1;
+    border: solid 1px gray;
+  }
+
+  .overlappingImage-toggle {
+    width: 400px;
+    height: 350px;
+    position: absolute;
+    top: 0px;
+    left: -160px;
+    z-Index: 0;
+    opacity: 0.5;
+    border: solid 1px gray;
+  }
+
+  .button-toggle {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #000;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-Index: 2;
+    background-color: purple;
+  }
+
+@media (max-width: 768px) {
+  .app {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-one {
+    display: block;
+    margin-left: -20px;
+    flex-direction: row;
+    padding-right: -30px;
+  }
+ 
+  .container {
+    display: flex;
+  }
+  .links {
+    flex: 1;
+    padding-top: 30px;
+  }
+  .content {
+    flex: 2;
+    padding-left: -100px;
+  }
+  .content, .links {
+    flex: 1 1 100%;
+  }
+  .pic img {
+    width: 100px;
+    height: 120px;
+  }
+  .text-container {
+    font-size: 1rem;
+  }
+}
+
+  
+
+@media (max-width: 480px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding-left: 20px;
+    padding-right: -0px;
+  }
+
+  .intro {
+    font-size: 1.7rem;
+  }
+  .quiz {
+  text-align: center;
+  width : 20rem;
+  } 
+
+  .info {
+  padding-left: 10px;
+  } 
+
+  .container {
+    display: flex;
+    padding-bottom: 20px;
+  }
+
+  .links {
+    flex: 1;
+    padding-top: 0px;
+  }
+
+  .content {
+    flex: 3;
+    padding: 0;
+  }
+
+
+  
+  .text-container {
+    font-size: 0.975rem;
+    margin: 2px;
+    margin-bottom: 5px;
+  }
+  
+  .pic img {
+    width: 120px;
+    height: 150px;
+    margin-top: 15px;
+    margin-right: 30px;
+  }
+  
+  .App-header {
+    font-size: calc(8px + 2vmin);
+  }
+
+  .container-toggle {
+    text-align: center;
+    padding: 20px,
+  }
+
+  .imageContainer-toggle {
+    position: relative;
+    width: 20rem;
+    height: 16rem;
+    display: inline-block;
+    margin-bottom: -100px;
+  }
+
+  .image-toggle {
+    width: 18rem;
+    height: 17rem;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    z-Index: 1;
+    border: solid 1px gray;
+  }
+
+  .overlappingImage-toggle {
+    width: 18rem;
+    height: 150px;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    z-Index: 0;
+    opacity: 0.5;
+    border: solid 1px gray;
+  }
+
+  .button-toggle {
+    position: absolute;
+    bottom: 215px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #000;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-Index: 2;
+    background-color: purple;
+  }
+  .linkedin, .github, .cv {
+    display: flex;
+    padding-bottom: 15px;
+    padding-left: 15px;
   }
 }

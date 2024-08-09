@@ -1,38 +1,58 @@
 import '../App.css';
+import React, { forwardRef } from 'react';
 
-export default function Message() {
+const Message = forwardRef((props, ref) => {
   return <div className='text'>
-<br></br>
 Som student i mitt sista år på yrkeshögskolan Jensen i Malmö söker jag en LIA-plats (Lärande i Arbete)
-på ett företag för att slutföra min utbildning. Detta är ett krav från skolan, som förväntar sig att 
+på ett företag för att slutföra min utbildning.
+<br/><br/>
+Relevanta datum:<div className='datum'>29/10 2024 - 25/04 2025</div> 
+<br/>
+Detta är ett krav från skolan, som förväntar sig att 
 jag ska lära mig mitt nya yrke på bästa möjliga sätt genom att praktisera tillsammans med erfarna 
 yrkesverksamma. 
-<br></br><br></br>
+<br/><br/>
+<strong>Mina förväntningar</strong>
+<br/><br/>
 Jag hoppas få en djupgående inblick i hur programmering fungerar i praktiken, utanför 
 klassrummets teoretiska ram. Jag ser fram emot att bli utmanad och att känna mig redo att ta mig an 
 min första tjänst efter utbildningen.
-<br></br><br></br><br></br><br></br><br></br><br></br>
+<br/><br/>
+<br/><br/>
 
+<div section id='about' ref={ref}></div>
 <p>Om mig</p>
-Jag har aktivt tränat och tävlat i kampsporten MMA i ungefär 10 år. Till skillnad från 
-lagidrotter som fotboll, där man kan förlita sig på lagkamrater för att täcka upp för ens brister, 
-kräver kampsport en hög grad av självständighet. Man får inte samma nivå av omhändertagande 
-från tränare och andra institutioner, vilket innebär att jag har behövt göra mycket eget arbete. 
-Detta har inneburit att jag har lärt mig om korrekt kost, styrketräning och annan fysträning, 
-organiserat vissa träningar själv och samlat ihop andra för att få in lite extra träning.
-<br></br><br></br>
-Jag har spenderat mycket tid på att titta på YouTube och googla för att lära mig rätt teknik och 
-hur man lagar nyttig och bra mat. På något sätt ledde detta intresse till att jag började lära mig 
-programmera i Java på egen hand. Jag tyckte att det var roligt och ibland kunde jag tänka på vissa 
-problem väldigt länge och helt glömma bort tiden. Till slut inspirerades jag att söka utbildning 
-och hittade helt rätt på min underbara yrkeshögskola, Jensen.
-<br></br><br></br>
-Passionen ligger i "aha!"-ögonblicket. Ju längre tid det tar att nå det, desto mer tillfredsställande
- blir det. Jag hittar ofta min mening när jag försöker lära mig något nytt som också utmanar mig. 
- Ibland kan det kännas som om jag aldrig kommer att förstå, och tanken "jag borde ge upp nu på en
- gång" dyker upp. Men ibland efter en god natts sömn (eller flera) får jag ofta en liten uppenbarelse 
- nästa gång jag sätter mig ner, och plötsligt är jag något på spåret.
-<br></br><br></br>
+Mitt "modersmål" är C# och jag har även använt Java som jag lärt mig genom
+en online kurs på eget initiativ. Jag har även använt mig av JavaScript till
+React och individuellt. Jag har också lärt mig att använda GitHub Actions och Postman
+för testning. Dessutom har utbildningen säkerhet som inriktning.
+<br/><br/>
+<strong>Bakgrundshistoria</strong>
+<br/><br/>
+Mitt inträde i detta yrke har varit något okonventionellt. Jag har alltid varit nyfiken på 
+hur programmering fungerar och all den mystik som ligger bakom applikationer och de spel 
+jag har spelat sedan jag var ung.
+<br/><br/>
+Jag bokade en tvåmånaders resa till Thailand för att ta lite tid för mig själv och träna 
+kampsport, eftersom det är så populärt där. Jag började fundera på vad jag skulle göra 
+mellan träningarna och andra aktiviteter. Då fick jag idén att det kunde vara kul att 
+prova att lära mig Java genom en onlinekurs.
+<br/><br/>
+Jag insåg snabbt att det var ganska utmanande, men när jag övervann ett hinder fick jag 
+en härlig dopaminkick. Jag fortsatte att avsätta ett par timmar om dagen för att lära mig 
+mer och kände att detta verkligen var något för mig.
+<br/><br/>
+När jag väl var tillbaka i Sverige ville jag fortsätta min programmeringsresa och 
+hittade jag Jensen Yrkeshögskola. Jag ansökte till utbildningen och kom in. Sedan dess 
+har det varit full fart i programmeringsvärlden och det fortsätter ännu. Det är fantastiskt 
+hur mycket man kan lära sig på kort tid.
+<br/><br/>
+I skolan träffade jag många likasinnade människor och några passionerade och inspirerande 
+lärare. Jag har lätt för att arbeta med andra och tycker om att dela idéer tillsammans.
+<br/><br/>
 </div>
-};
+  }
+)
 
+export default Message;
+  

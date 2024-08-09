@@ -1,5 +1,6 @@
 import linked from './Pics/linkedin.jpg';
 import github from './Pics/github.jpg';
+import cv from './Pics/Cv.png';
 import '../App.css';
 
 export default function Info() {
@@ -18,9 +19,9 @@ export default function Info() {
             <div className="text-container">Kolla mina GitHub projekt</div>
         </a></li>
 
-       <li><a href="www.linkedin.com/in/danijel-grbic-baa8541a3" className="cv" target="_blank">
+       <li><a href='/CV.pdf' className="cv" target="_blank">
               <div className="image-container">
-                <img src={linked} alt='Representational photo for CV'/>
+                <img src={cv} alt='Representational photo for CV'/>
             </div>
             <div className="text-container">Kolla in mitt CV</div>
         </a></li>

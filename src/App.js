@@ -1,28 +1,55 @@
 // src/App.js
 // src/App.js
-import React, { useState } from 'react';
-import Button from './Components/Button';
-import MansGotJokes from './Components/Jokes';
-import OnOrOff from './Components/OnOrOff';
-import PersonalizedOutput from './Components/Greetings';
-import Card from './Components/Card';
-import Menu from './Components/Menu';
+import React, { useRef } from 'react';
+import styles from './Components/Card.module.css'
 import './App.css';
 import Pics from './Components/Picture';
 import pic from './Components/Pics/bild-cap.jpg';
 import Message from './Components/Message';
 import TextInput from './Components/TextInput';
 import Info from './Components/Info';
-
+import GitHub from './Components/GitHub';
 
 function App() {
+
+  const startRef = useRef(null);
+  const aboutRef = useRef(null);
+  const projectRef = useRef(null);
+
+
+    // Scroll handler
+  const scrollToRef = (ref) => {
+        if (ref && ref.current) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
   return (
+
     <div className="app">
-      <div className='container'>
-        <div className='links'>
-          <Menu></Menu>
+      <div className='container-one'>
+        <div className='linkz'>
+          <div className={styles.container}>
+            <ul className={styles.menu}>
+                <li>
+                    <a className={styles.start} href='#start' onClick={(e) => { e.preventDefault(); scrollToRef(startRef); }}>
+                        Start
+                    </a>
+                </li>
+                <li>
+                    <a className={styles.start} href="#about" onClick={(e) => { e.preventDefault(); scrollToRef(aboutRef); }}>
+                        Om mig
+                    </a>
+                </li>
+                <li>
+                    <a className={styles.start}href="#project" onClick={(e) => { e.preventDefault(); scrollToRef(projectRef); }}>
+                        Projekt
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div className='content'>
+        </div>
+        <div className='content-one' section id="start" ref={startRef}>
           <TextInput text='Danijel Grbic' size='p' cName='myName' />
           <TextInput text="Hej! Jag är Danijel, blivande mjukvaru-programmerare." size='p' cName='intro' />
           <div className='container'>
@@ -33,7 +60,9 @@ function App() {
               <Info/>
             </div>
           </div>
-          <Message/>
+          <Message ref={aboutRef}/>
+          <div ref={projectRef}/>
+          <GitHub/> 
         </div>
       </div>
     </div>
@@ -41,7 +70,6 @@ function App() {
 }
 
 export default App;
-
 /*
 // src/App.js
 import React from 'react';
