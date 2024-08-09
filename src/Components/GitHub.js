@@ -10,9 +10,9 @@ export default function GitHub() {
     return <div className="text"><p>Projekt</p>
         <strong>YungDev</strong>
         <section id='start'>
-        <br/><br/>
+        <br/>
         Detta är ett terminalbaserat spel som jag och tre klasskamrater har skapat. Spelet
-        använder SQLite för att lagra data, C# som programmeringsspråk inom .NET ramverket. 
+        använder SQLite för att lagra data, C# som programmeringsspråk . 
         Du navigerar genom olika platser och utför handlingar i spelet med hjälp av REST API.
         <br/><br/>
         Spelet handlar om en ung utvecklare som samlar poäng baserat på din skicklighetsnivå 
@@ -28,7 +28,7 @@ export default function GitHub() {
         <ToggleImages first={menuOne} second={menuTwo} link="https://github.com/DanijelGb/YungDev" />
         
         <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-        <strong>Säkerhetstentan</strong>
+        <strong>Säkerhetsprovet</strong>
         <br/><br/>
         En app som jag skapade för att hjälpa till med plugget inför vår säkerhetstenta. En rolig
         liten app som gör pluggandet lite mer njutbart och som man kan repetera många gånger

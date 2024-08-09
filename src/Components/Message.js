@@ -18,8 +18,6 @@ Jag hoppas få en djupgående inblick i hur programmering fungerar i praktiken, 
 klassrummets teoretiska ram. Jag ser fram emot att bli utmanad och att känna mig redo att ta mig an 
 min första tjänst efter utbildningen.
 <br/><br/>
-<br/><br/>
-
 <div section id='about' ref={ref}></div>
 <p>Om mig</p>
 Mitt "modersmål" är C# och jag har även använt Java som jag lärt mig genom
